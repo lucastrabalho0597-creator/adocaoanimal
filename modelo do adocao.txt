@@ -1,0 +1,51 @@
+Lucas Senna
+
+Sistema de registro: AdoCão
+
+A ideia geral é um site para adoção de animais resgatados e controle de cuidados após a adoção. 
+Como vai funcionar?
+O animal será registrado após o resgate e poderá passar por alguns procedimentos médicos caso necessário e informar quais procedimentos, o Tutor deve fazer seu registro com seus dados para fins de controle. Após a adoção será agendado por no mínimo 4 anos os acompanhamentos do animal. Esse acompanhamento será realizado por um funcionário do estabelecimento de adoção informando o estado, cuidados e ambiente do animal.  
+
+Entidades: Tutor, Registro animal, Agendamento
+
+Tutor: id,Nome, CPF, Endereço, Telefone, tipoDomicilio.
+
+Registro animal: id, Nome, raça, cor, sexo, vacinado, idade, peso, data de registro, motivoResgate,castração.
+
+Agendamento: id, tutorId, animalId, datahora, tipo, status, descrição;
+
+
+{
+    Id : "T001"
+    nome: "Claudio Narah da Silva"
+    cpf: 111100025033
+    endereco: "Av. Pascoal Vinhas, 201"
+    telefone: 53999999999
+    tipoDomicilio: "Casa"
+
+}
+
+{
+	Id: " RGA001"
+	Nome: "Bolinha"
+	Raca: "Shitzu"
+	Cor: "Branco com marrom"
+	Sexo: "Fêmea"
+	Vacinado: "Sim"
+	Idade: 5
+	Peso: 4.3
+	DataRegistro: "05/12/2023"
+	MotivoResgate: "Abandono"
+	Castração: "Não"
+}
+
+{
+	id:F001
+	TutorId: "T001"
+	AnimalId: "RGA001"
+	dataHora: "19/10/2026 10:30"
+	tipo: "visita anual"
+	Status: "concluído"
+	Descricao: "O aninal se encontra em perfeitas condições" 
+	
+}
