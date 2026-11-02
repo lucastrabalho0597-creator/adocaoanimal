@@ -35,3 +35,15 @@ function excluir(chave, id) {
         return false
     }
 }
+function atualizar(chave, id, dados) {
+    const lista = listar(chave)
+    const indice = lista.findIndex(r => r.id === id)
+    if (indice !== -1) {
+        dados.id = id
+        lista[indice] = dados
+        persistir(chave, lista)
+        return true
+    } else {
+        return false
+    }
+}
