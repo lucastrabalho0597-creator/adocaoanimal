@@ -10,6 +10,7 @@ function montarTabela() {
             <td>${t.tipoDomicilio}</td>
             <td>
                 <button class="btn btn-sm btn-warning" onclick='buscarProForm(${t.id})'>Alterar</button>
+                <button class="btn btn-sm btn-danger" onclick='excluirTutor(${t.id})'>Excluir</button>
             </td>
         </tr>`
     })
@@ -17,6 +18,7 @@ function montarTabela() {
 }
 
 function gravarDoForm() {
+    const idTexto = document.getElementById("id").value
     const dados = {
         nome: document.getElementById("nome").value,
         cpf: document.getElementById("cpf").value,
@@ -24,7 +26,11 @@ function gravarDoForm() {
         telefone: document.getElementById("telefone").value,
         tipoDomicilio: document.getElementById("tipoDomicilio").value
     }
-    adicionar("tutores", dados)
+    if (idTexto === "") {
+        adicionar("tutores", dados)
+    } else {
+        atualizar("tutores", Number(idTexto), dados)
+    }
     montarTabela()
     document.getElementById("formulario").reset()
 }
@@ -40,5 +46,12 @@ function buscarProForm(id) {
         document.getElementById("tipoDomicilio").value = t.tipoDomicilio
     }
 }
+
+function excluirTutor(id) {
+    excluir("tutores", id)
+    montarTabela()
+}
+
+montarTabela()
 
 montarTabela()
