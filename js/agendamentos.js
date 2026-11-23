@@ -37,8 +37,7 @@ function gravarDoForm() {
     const idTexto = document.getElementById("id").value
     const tutorId = document.getElementById("tutorId").value
     const animalId = document.getElementById("animalId").value
-    // Usa o "required" dos campos do HTML: se algum estiver em branco ou inválido,
-    // o navegador mostra o aviso no campo e não salva
+
     const formulario = document.getElementById("formulario")
     if (!formulario.reportValidity()) {
         return
@@ -81,4 +80,4 @@ function excluirAgendamento(id) {
 }
 
 carregarSelects()
-montarTabela()
+montarTabela()

@@ -101,5 +101,4 @@ function mostrarTudo() {
 
 mostrarTudo()
 
-// Atualiza sozinha se os dados mudarem em outra aba (ex.: admin aberto ao lado)
-window.addEventListener("storage", mostrarTudo)
+window.addEventListener("storage", mostrarTudo)

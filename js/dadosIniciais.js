@@ -1,6 +1,3 @@
-// Dados iniciais: só são gravados se a chave ainda não existir no localStorage.
-// Assim o professor já abre o sistema com 5 registros de cada,
-// e se alguém excluir tudo, os dados não voltam sozinhos.
 
 if (localStorage.getItem("tutores") === null) {
     const tutoresIniciais = [

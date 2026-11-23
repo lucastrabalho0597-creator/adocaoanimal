@@ -47,7 +47,7 @@ function atualizar(chave, id, dados) {
         return false
     }
 }
-// Converte "2026-11-14" em "14/11/2026" e "2026-11-14T10:30" em "14/11/2026 10:30"
+
 function formatarData(texto) {
     if (!texto) {
         return ""
@@ -61,8 +61,7 @@ function formatarData(texto) {
     return resultado
 }
 
-// Remove tudo que não for número (usado no CPF e no telefone)
-// e deixa no máximo 11 dígitos, mesmo se colarem "123.456.789-01"
+
 function somenteNumeros(campo) {
     campo.value = campo.value.replace(/[^0-9]/g, "").slice(0, 11)
 }

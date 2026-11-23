@@ -18,8 +18,7 @@ function montarTabela() {
 }
 
 function gravarDoForm() {
-    // Usa o "required" dos campos do HTML: se algum estiver em branco ou inválido,
-    // o navegador mostra o aviso no campo e não salva
+  
     const formulario = document.getElementById("formulario")
     if (!formulario.reportValidity()) {
         return
@@ -60,4 +59,4 @@ function excluirTutor(id) {
     }
 }
 
-montarTabela()
+montarTabela()
