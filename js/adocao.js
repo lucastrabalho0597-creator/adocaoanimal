@@ -39,7 +39,7 @@ function mostrarAnimais() {
                     <p class="card-text mb-1"><strong>Peso:</strong> ${a.peso} kg</p>
                     <p class="card-text mb-1"><strong>Vacinado:</strong> ${simNao(a.vacinado)}</p>
                     <p class="card-text mb-1"><strong>Castrado:</strong> ${simNao(a.castrado)}</p>
-                    <p class="card-text mb-1"><strong>Data de registro:</strong> ${a.dataRegistro}</p>
+                    <p class="card-text mb-1"><strong>Data de registro:</strong> ${formatarData(a.dataRegistro)}</p>
                     <p class="card-text mb-0"><strong>Motivo do resgate:</strong> ${a.motivoResgate}</p>
                 </div>
             </div>
@@ -79,7 +79,7 @@ function mostrarAgendamentos() {
                     <span>${ag.status}</span>
                 </div>
                 <div class="card-body">
-                    <p class="mb-2"><strong>Data e hora:</strong> ${ag.dataHora.replace("T", " ")}</p>
+                    <p class="mb-2"><strong>Data e hora:</strong> ${formatarData(ag.dataHora)}</p>
                     ${blocoTutor}
                     ${blocoAnimal}
                     <p class="mb-0"><strong>Descrição:</strong> ${ag.descricao ? ag.descricao : "Sem descrição"}</p>
@@ -102,4 +102,4 @@ function mostrarTudo() {
 mostrarTudo()
 
 // Atualiza sozinha se os dados mudarem em outra aba (ex.: admin aberto ao lado)
-window.addEventListener("storage", mostrarTudo)
+window.addEventListener("storage", mostrarTudo)

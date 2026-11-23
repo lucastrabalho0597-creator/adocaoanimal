@@ -9,4 +9,4 @@ function recuperarRegistros(chave) {
     else {
         return []
     }
-}
+}

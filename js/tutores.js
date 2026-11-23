@@ -18,6 +18,12 @@ function montarTabela() {
 }
 
 function gravarDoForm() {
+    // Usa o "required" dos campos do HTML: se algum estiver em branco ou inválido,
+    // o navegador mostra o aviso no campo e não salva
+    const formulario = document.getElementById("formulario")
+    if (!formulario.reportValidity()) {
+        return
+    }
     const idTexto = document.getElementById("id").value
     const dados = {
         nome: document.getElementById("nome").value,
@@ -48,10 +54,10 @@ function buscarProForm(id) {
 }
 
 function excluirTutor(id) {
-    excluir("tutores", id)
-    montarTabela()
+    if (confirm("Deseja excluir este tutor?")) {
+        excluir("tutores", id)
+        montarTabela()
+    }
 }
 
-montarTabela()
-
-montarTabela()
+montarTabela()

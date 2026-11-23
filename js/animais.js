@@ -9,6 +9,7 @@ function montarTabela() {
             <td>${a.sexo}</td>
             <td>${a.idade}</td>
             <td>${a.peso}</td>
+            <td>${formatarData(a.dataRegistro)}</td>
             <td>${a.vacinado ? "Sim" : "Não"}</td>
             <td>${a.castrado ? "Sim" : "Não"}</td>
             <td>
@@ -21,6 +22,12 @@ function montarTabela() {
 }
 
 function gravarDoForm() {
+    // Usa o "required" dos campos do HTML: se algum estiver em branco ou inválido,
+    // o navegador mostra o aviso no campo e não salva
+    const formulario = document.getElementById("formulario")
+    if (!formulario.reportValidity()) {
+        return
+    }
     const idTexto = document.getElementById("id").value
     const dados = {
         nome: document.getElementById("nome").value,
@@ -61,8 +68,10 @@ function buscarProForm(id) {
 }
 
 function excluirAnimal(id) {
-    excluir("animais", id)
-    montarTabela()
+    if (confirm("Deseja excluir este animal?")) {
+        excluir("animais", id)
+        montarTabela()
+    }
 }
 
-montarTabela()
+montarTabela()

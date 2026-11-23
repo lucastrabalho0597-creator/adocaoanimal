@@ -1,0 +1,131 @@
+/* ===== Cores do AdoCão ===== */
+/* creme de fundo: #fff4e6 | laranja: #f28c28 | laranja escuro: #d9731a */
+
+/* Fundo da página */
+body {
+    background-color: #fff4e6;
+}
+
+/* Rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Linha laranja embaixo da navbar escura */
+.navbar {
+    border-bottom: 4px solid #f28c28;
+}
+
+.navbar-brand {
+    color: #f28c28 !important;
+    font-weight: bold;
+}
+
+/* Títulos */
+h1,
+h2 {
+    color: #d9731a;
+    font-weight: bold;
+}
+
+h2 {
+    border-bottom: 2px solid #f28c28;
+    padding-bottom: 6px;
+    margin-bottom: 20px;
+}
+
+/* Menu lateral (offcanvas): item ativo e hover em laranja */
+.nav-pills .nav-link.active {
+    background-color: #f28c28;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #d9731a;
+}
+
+/* ===== Cards ===== */
+.card {
+    border: none;
+    border-radius: 12px;
+    border-top: 5px solid #f28c28;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Quando passa o mouse, o card sobe e ganha sombra */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #d9731a;
+    font-weight: bold;
+}
+
+.card-header {
+    background-color: #ffe3c2;
+}
+
+/* ===== Tabelas do admin ===== */
+.table-responsive {
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+/* Linha da tabela destacada no hover */
+.table-hover tbody tr:hover > * {
+    background-color: #ffe3c2;
+}
+
+/* ===== Formulários ===== */
+#formulario {
+    background-color: #ffffff;
+}
+
+.container.border.rounded {
+    background-color: #ffffff;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Campo em foco fica com borda laranja */
+.form-control:focus,
+.form-select:focus {
+    border-color: #f28c28;
+    box-shadow: 0 0 0 0.2rem rgba(242, 140, 40, 0.3);
+}
+
+.form-check-input:checked {
+    background-color: #f28c28;
+    border-color: #f28c28;
+}
+
+/* ===== Botões ===== */
+.btn {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background-color: #f28c28;
+    border-color: #f28c28;
+}
+
+.btn-primary:hover {
+    background-color: #d9731a;
+    border-color: #d9731a;
+}
+
+/* Rodapé */
+footer {
+    border-top: 1px solid #f28c28;
+    padding-top: 12px;
+}

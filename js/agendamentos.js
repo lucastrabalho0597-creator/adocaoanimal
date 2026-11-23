@@ -21,7 +21,7 @@ function montarTabela() {
         linhas += `<tr>
             <td>${tutor ? tutor.nome : "(removido)"}</td>
             <td>${animal ? animal.nome : "(removido)"}</td>
-            <td>${ag.dataHora.replace("T", " ")}</td>
+            <td>${formatarData(ag.dataHora)}</td>
             <td>${ag.tipo}</td>
             <td>${ag.status}</td>
             <td>
@@ -37,8 +37,10 @@ function gravarDoForm() {
     const idTexto = document.getElementById("id").value
     const tutorId = document.getElementById("tutorId").value
     const animalId = document.getElementById("animalId").value
-    if (tutorId === "" || animalId === "") {
-        alert("Selecione o tutor e o animal.")
+    // Usa o "required" dos campos do HTML: se algum estiver em branco ou inválido,
+    // o navegador mostra o aviso no campo e não salva
+    const formulario = document.getElementById("formulario")
+    if (!formulario.reportValidity()) {
         return
     }
     const dados = {
@@ -72,9 +74,11 @@ function buscarProForm(id) {
 }
 
 function excluirAgendamento(id) {
-    excluir("agendamentos", id)
-    montarTabela()
+    if (confirm("Deseja excluir este agendamento?")) {
+        excluir("agendamentos", id)
+        montarTabela()
+    }
 }
 
 carregarSelects()
-montarTabela()
+montarTabela()
