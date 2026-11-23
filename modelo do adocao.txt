@@ -8,44 +8,42 @@ O animal será registrado após o resgate e poderá passar por alguns procedimen
 
 Entidades: Tutor, Registro animal, Agendamento
 
-Tutor: id,Nome, CPF, Endereço, Telefone, tipoDomicilio.
+Tutor: id, nome, cpf, endereco, telefone, tipoDomicilio.
 
-Registro animal: id, Nome, raça, cor, sexo, vacinado, idade, peso, data de registro, motivoResgate,castração.
+Registro animal: id, nome, raca, cor, sexo, idade, peso, dataRegistro, motivoResgate, vacinado, castrado.
 
-Agendamento: id, tutorId, animalId, datahora, tipo, status, descrição;
+Agendamento: id, tutorId, animalId, dataHora, tipo, status, descricao.
 
 
 {
-    Id : "T001"
-    nome: "Claudio Narah da Silva"
-    cpf: 111100025033
-    endereco: "Av. Pascoal Vinhas, 201"
-    telefone: 53999999999
+    id: 1,
+    nome: "Claudio Narah da Silva",
+    cpf: "11110002503",
+    endereco: "Av. Pascoal Vinhas, 201",
+    telefone: "53999999999",
     tipoDomicilio: "Casa"
-
 }
 
 {
-	Id: " RGA001"
-	Nome: "Bolinha"
-	Raca: "Shitzu"
-	Cor: "Branco com marrom"
-	Sexo: "Fêmea"
-	Vacinado: "Sim"
-	Idade: 5
-	Peso: 4.3
-	DataRegistro: "05/12/2023"
-	MotivoResgate: "Abandono"
-	Castração: "Não"
+    id: 1,
+    nome: "Bolinha",
+    raca: "Shih-tzu",
+    cor: "Branco com marrom",
+    sexo: "Fêmea",
+    idade: 5,
+    peso: 4.3,
+    dataRegistro: "2023-12-05",
+    motivoResgate: "Abandono",
+    vacinado: true,
+    castrado: false
 }
 
 {
-	id:F001
-	TutorId: "T001"
-	AnimalId: "RGA001"
-	dataHora: "19/10/2026 10:30"
-	tipo: "visita anual"
-	Status: "concluído"
-	Descricao: "O aninal se encontra em perfeitas condições" 
-	
+    id: 1,
+    tutorId: 1,
+    animalId: 1,
+    dataHora: "2026-10-19T10:30",
+    tipo: "Acompanhamento",
+    status: "Concluído",
+    descricao: "O animal se encontra em perfeitas condições."
 }
