@@ -1,7 +1,4 @@
-/* ===== Cores do AdoCão ===== */
-/* creme de fundo: #fff4e6 | laranja: #f28c28 | laranja escuro: #d9731a */
 
-/* Fundo da página */
 body {
     background-color: #fff4e6;
 }
@@ -11,7 +8,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Linha laranja embaixo da navbar escura */
 .navbar {
     border-bottom: 4px solid #f28c28;
 }
@@ -34,7 +30,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Menu lateral (offcanvas): item ativo e hover em laranja */
+/* Menu lateral */
 .nav-pills .nav-link.active {
     background-color: #f28c28;
 }
